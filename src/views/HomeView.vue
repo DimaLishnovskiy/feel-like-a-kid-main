@@ -134,7 +134,7 @@ const router = useRouter()
 
   <Hero />
 
-  <div class="mobile:mt-[-350px] mt-[-300px]">
+  <div class="mobile:mt-[-310px] mt-[-300px]">
     <Paper :height="isMobile ? 1000 : 1375" :startHeightProp="isMobile ? 480 : undefined"
       :endHeightProp="isMobile ? 600 : undefined">
       <h3 style="letter-spacing: 4px"

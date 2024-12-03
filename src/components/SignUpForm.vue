@@ -174,9 +174,9 @@ const onSubmit = async () => {
     </div>
 
 
-    <div class="paypal-container">
-      <div id="paypal-btns" />
-    </div>
+<!--    <div class="paypal-container">-->
+<!--      <div id="paypal-btns" />-->
+<!--    </div>-->
 
     <div :class="`${orderId ? 'mobile:mb-8 w-full max-w-[500px] mb-10' : ''}`" id="payment-element"></div>
 

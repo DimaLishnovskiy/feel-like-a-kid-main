@@ -7,17 +7,23 @@ import { MotionPlugin } from '@vueuse/motion'
 import { loadScript } from '@paypal/paypal-js'
 const app = createApp(App)
 
+//
+// loadScript({
+//   currency: 'USD',
+//   clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID,
+//   vault: true,
+//   intent: 'subscription',
+// }).then(() => {
+//   app.use(router)
+//
+//   app.use(MotionPlugin)
+//
+//   app.mount('#app')
+// })
 
-loadScript({
-  currency: 'USD',
-  clientId: import.meta.env.VITE_PAYPAL_CLIENT_ID,
-  vault: true,
-  intent: 'subscription',
-}).then(() => {
-  app.use(router)
+app.use(router)
 
-  app.use(MotionPlugin)
+app.use(MotionPlugin)
 
-  app.mount('#app')
-})
+app.mount('#app')
 

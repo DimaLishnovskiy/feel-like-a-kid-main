@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <link href="https://www.cdnfonts.com/runescape-uf.font" rel="canonical">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RuneScape</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+  </body>
+
+  <script>
+    function loadFbq() {
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq)
+          return
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments)
+        }
+        if (!f._fbq)
+          f._fbq = n
+        n.push = n
+        n.loaded = !0
+        n.version = '2.0'
+        n.queue = []
+        t = b.createElement(e)
+        t.async = !0
+        t.src = v
+        s = b.getElementsByTagName(e)[0]
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js'))
+      fbq('init', '940345584186307')
+    }
+
+    function loadGoogle() {
+      window.dataLayer = window.dataLayer || []
+      function gtag() { dataLayer.push(arguments) }
+      window.gtag = gtag
+      gtag('js', new Date())
+
+      gtag('config', 'UA-89124565-1')
+    }
+
+    setTimeout(() => {
+      loadGoogle()
+      loadFbq()
+    }, 0)
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89124565-1"></script>
+</html>

@@ -29,7 +29,7 @@ const router = useRouter()
       :transition="{
         ease: 'linear'
       }"
-      class="mobile:justify-start mobile:pt-[90px] relative max-w-[1200px] m-[auto] z-10 flex flex-col h-[100vh] content-wrapper"
+      class="mobile:justify-start mobile:pt-[30px] relative max-w-[1200px] m-[auto] z-10 flex flex-col h-[100vh] content-wrapper"
     >
       <h1
         v-motion="{
